@@ -1,6 +1,8 @@
-# React + Vite
+# AI Coach Frontend 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This provides the UI to work with AI Coach Backend to deliver a complete web learning platform
+
+This repo uses React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
