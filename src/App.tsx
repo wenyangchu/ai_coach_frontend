@@ -30,7 +30,7 @@ function App() {
   });
 
   useEffect(() => {
-    fetch(`${apiUrl}/api/getUserLearningProgress`)
+    fetch(`${apiUrl}/getUserLearningProgress`)
       .then((res) => res.json())
       .then((d) => {
         setData({
@@ -80,8 +80,8 @@ function App() {
     });
     formData.append("question_id", data.question.id);
 
-    fetch(`${apiUrl}/api/answerQuestion`, {
-      method: "POST",
+    fetch(`${apiUrl}/answerQuestion`, {
+      method: "PUT",
       body: formData,
     })
       .then((res) => res.json())
@@ -94,7 +94,7 @@ function App() {
       });
   };
   const handleNextQuestion = () => {
-    fetch(`${apiUrl}/api/getQuestion`)
+    fetch(`${apiUrl}/getQuestion`)
       .then((res) => res.json())
       .then((d) => {
         setData(prev => ({
